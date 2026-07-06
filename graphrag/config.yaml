@@ -1,0 +1,104 @@
+# ==============================================================================
+# GraphRAG Pipeline — Configuration File
+# ==============================================================================
+
+paths:
+  # ── Input Parquet files (read-only, never modified by the pipeline) ──────
+  entities:      "data/input/entities.parquet"       # one row per KG node
+  relationships: "data/input/relationships.parquet"  # one row per directed edge
+  text_units:    "data/input/text_units.parquet"     # source narrative chunks
+  attributes:    "data/input/attributes.parquet"     # structured node attributes (optional)
+  vector_db:     "data/input/lancedb"                # LanceDB directory for vector fallback
+
+  # ── Evaluation I/O ───────────────────────────────────────────────────────
+  input_excel:   "data/Benchmark.xlsx"                              # query list with gold answers
+  output_excel:  "data/output/graphrag_evaluation_results.xlsx"     # base name; timestamp appended at runtime
+
+# ------------------------------------------------------------------------------
+# Pipeline flags
+# Controls which phases are executed on startup.
+# ------------------------------------------------------------------------------
+pipeline:
+  run_graph_build: true   # Phase 1 — load Parquet files into memory as nx.DiGraph
+  run_embeddings:  true   # Phase 2 — embed entities into LanceDB for vector-search fallback
+
+# ------------------------------------------------------------------------------
+# LLM settings
+# Two model slots allow different models for different pipeline stages.
+# answer_model  : used for answer generation (Step C) — heavier, higher quality
+# report_model  : used for semantic query parsing (Step A) — lighter, faster
+# temperature 0.0 ensures deterministic outputs for reproducible evaluation.
+# ------------------------------------------------------------------------------
+llm:
+  api_key:         "YOUR_API_KEY_HERE"          # overridden by OPENAI_API_KEY env variable
+  answer_model:    "gpt-4o"                     # answer generation (Step C)
+  report_model:    "gpt-4o-mini"                # semantic query parser (Step A)
+  embedding_model: "text-embedding-3-small"     # vector fallback embeddings
+  max_tokens:      1000                         # default output token budget
+  temperature:     0.0                          # deterministic output for reproducibility
+  max_retries:     3                            # retry attempts on API or JSON errors
+  timeout:         60                           # request timeout in seconds
+  model_supports_json: true                     # enables json_object response format enforcement
+
+
+# ------------------------------------------------------------------------------
+# LLM — provider per slot
+# Supported providers: openai | google | anthropic
+# ------------------------------------------------------------------------------
+llm:
+  # ── Answer generation (Step C) ───────────────────────────────────────────
+  answer_model:    "YOUR_MODEL_HERE"          
+  answer_provider: "YOUR_FAMILY_MODEL_HERE"
+  answer_api_key:  "YOUR_API_KEY_HERE"          # overridden by API_KEY env variable
+  # ── Semantic query parser (Step A) ───────────────────────────────────────
+  report_model:    "YOUR_MODEL_HERE"
+  report_provider: "YOUR_FAMILY_MODEL_HERE"
+  report_api_key:  "YOUR_API_KEY_HERE"          # overridden by API_KEY env variable
+
+  # ── Embeddings — vector-search fallback ──────────────────────────────────
+  # NOTE: Google embeddings are not available via OpenAI-compatible endpoint.
+  # Use OpenAI embeddings for the vector fallback (requires an OpenAI key),
+  # or disable vector fallback by setting run_embeddings: false above.
+  embedding_model:    "YOUR_MODEL_HERE"
+  embedding_provider: "YOUR_FAMILY_MODEL_HERE"
+  embedding_api_key:  "YOUR_API_KEY_HERE"          # overridden by API_KEY env variable
+ 
+ # ── Shared settings ───────────────────────────────────────────────────────
+  max_tokens:          8000   #Default
+  temperature:         0.0
+  max_retries:         3
+  timeout:             60
+  model_supports_json: true
+
+# ------------------------------------------------------------------------------
+# Embeddings
+# ------------------------------------------------------------------------------
+embeddings:
+  batch_size:   100
+  vector_store: "lancedb"
+
+# ------------------------------------------------------------------------------
+# Query parameters
+# ------------------------------------------------------------------------------
+query:
+  top_k_entities:       50      # number of candidate nodes returned by vector fallback
+  local_search_hops:    1       # hop expansion for specific and type+specific strategies
+  vector_fallback_hops: 2       # hop expansion for vector fallback (more hops = wider context)
+  context_size:         10000   # max characters for subgraph serialisation in LLM context
+  text_source_size:     10000   # max characters for source narrative chunks in LLM context
+  max_tokens:           1000    # output token budget for answer generation
+
+# ------------------------------------------------------------------------------
+# Ontology — entity types
+# Single source of truth for all ontological class names used across the pipeline:
+#   - SearchEngine  : builds type index and injects types into parser and answer prompts
+#   - GraphBuilder  : assigns colours by type in the HTML visualisation
+# Edit this list to adapt the pipeline to a different ontology without code changes.
+# Types follow the LOTO-RO class hierarchy (see ontology documentation).
+# ------------------------------------------------------------------------------
+ontology:
+  entity_types:
+    # - Entity_title1
+    # - Entity_title2
+    # - Entity_title3
+    #  ....

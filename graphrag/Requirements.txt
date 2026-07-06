@@ -1,0 +1,21 @@
+# Core data handling
+pandas>=2.0.0
+pyarrow>=14.0.0
+numpy>=1.24.0
+
+# Graph
+networkx>=3.0
+pyvis>=0.3.2
+
+# Vector store
+lancedb>=0.6.0
+
+# LLM
+openai>=1.30.0
+
+# Config & I/O
+pyyaml>=6.0
+openpyxl>=3.1.0
+
+# CLI progress
+tqdm>=4.66.0

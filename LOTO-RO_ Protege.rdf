@@ -1,0 +1,2505 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO/"
+     xml:base="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:Mid-="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Mid-/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Mid-/Upper-OntologyAlignment -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Mid-/Upper-OntologyAlignment"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#ValuesPossible -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#ValuesPossible"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#date -->
+
+    <rdfs:Datatype rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#date"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#time -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#time"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#activityExposesToHazard -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#activityExposesToHazard">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#WorkActivity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Hazard"/>
+        <rdfs:comment>Specifies the hazard to which a work activity exposes personnel.</rdfs:comment>
+        <rdfs:label>activityExposesToHazard</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#affectsActivity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#affectsActivity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#OrganizationalIssue"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#WorkActivity"/>
+        <rdfs:comment>Specifies the work activity affected by an organizational issue.</rdfs:comment>
+        <rdfs:label>affectsActivity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#affectsComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#affectsComponent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#TechnologicalFault"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#MachineComponent"/>
+        <rdfs:comment>Specifies the machine component affected by a technological fault.</rdfs:comment>
+        <rdfs:label>affectsComponent</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#appliedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#appliedTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTODevice"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Machine"/>
+        <rdfs:comment>Specifies the machine on which the LOTO device is applied.</rdfs:comment>
+        <rdfs:label>appliedTo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#assignedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#assignedTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTODevice"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonPerformer"/>
+        <rdfs:comment>Specifies the PersonPerformer to whom the LOTO device is assigned.</rdfs:comment>
+        <rdfs:label>assignedTo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#associatedWithEnergy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#associatedWithEnergy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Hazard"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#EnergySource"/>
+        <rdfs:comment>Specifies the energy source associated with a hazard.</rdfs:comment>
+        <rdfs:label>associatedWithEnergy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#belongsTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#belongsTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonPerformer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#OrganizationalUnit"/>
+        <rdfs:comment>Specifies the organizational unit to which a PersonPerformer belongs.</rdfs:comment>
+        <rdfs:label>belongsTo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#bypassesControlMeasure -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#bypassesControlMeasure">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#RoutineBypass"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#ControlMeasure"/>
+        <rdfs:comment>Specifies the control measure that was bypassed as part of a routine bypass behavior.</rdfs:comment>
+        <rdfs:label>bypassesControlMeasure</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#carriedOutDuring -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#carriedOutDuring">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#IncidentEvent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#WorkActivity"/>
+        <rdfs:comment>Specifies the work activity during which the incident occurred.</rdfs:comment>
+        <rdfs:label>carriedOutDuring</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#doesNotFollowStep -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#doesNotFollowStep">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonPerformer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTOProcedureStep"/>
+        <rdfs:comment>Specifies the LOTO procedure step that a PersonPerformer failed to follow.</rdfs:comment>
+        <rdfs:label>doesNotFollowStep</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#exposesParticipantTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#exposesParticipantTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonParticipant"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Risk"/>
+        <rdfs:comment>Specifies the risk to which a PersonParticipant is exposed during a work activity.</rdfs:comment>
+        <rdfs:label>exposesParticipantTo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#exposesPerformerTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#exposesPerformerTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonPerformer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Risk"/>
+        <rdfs:comment>Specifies the risk to which a PersonPerformer is exposed during a work activity.</rdfs:comment>
+        <rdfs:label>exposesPerformerTo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#exposesSupervisorTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#exposesSupervisorTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonSupervisor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Risk"/>
+        <rdfs:comment>Specifies the risk to which a PersonSupervisor is exposed during a work activity.</rdfs:comment>
+        <rdfs:label>exposesSupervisorTo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#generatesConsequence -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#generatesConsequence">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Cause"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Consequence"/>
+        <rdfs:comment>Specifies the consequence generated by a cause factor.</rdfs:comment>
+        <rdfs:label>generatesConsequence</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#happensIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#happensIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Consequence"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTOProcedureStep"/>
+        <rdfs:comment>Specifies the LOTO procedure step during which the consequence occurred.</rdfs:comment>
+        <rdfs:label>happensIn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#hasAuthorization -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#hasAuthorization">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonPerformer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Authorization"/>
+        <rdfs:comment>Specifies the authorization held by a PersonPerformer to perform LOTO-related tasks.</rdfs:comment>
+        <rdfs:label>hasAuthorization</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#hasCauseFactor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#hasCauseFactor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#IncidentEvent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Cause"/>
+        <rdfs:comment>Specifies the cause factor(s) associated with an incident event.</rdfs:comment>
+        <rdfs:label>hasCauseFactor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#hasComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#hasComponent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Machine"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#MachineComponent"/>
+        <rdfs:comment>Specifies a component that is part of a machine.</rdfs:comment>
+        <rdfs:label>hasComponent</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#hasControlMeasure -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#hasControlMeasure">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#WorkActivity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#ControlMeasure"/>
+        <rdfs:comment>Specifies the control measure required by a work activity that was not complied with during the incident.</rdfs:comment>
+        <rdfs:label>hasControlMeasure</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#hasEnergySource -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#hasEnergySource">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Machine"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#EnergySource"/>
+        <rdfs:comment>Specifies the energy source associated with a machine.</rdfs:comment>
+        <rdfs:label>hasEnergySource</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#hasHumanError -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#hasHumanError">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#IncidentEvent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#HumanError"/>
+        <rdfs:comment>Specifies the human error(s) identified in an incident event.</rdfs:comment>
+        <rdfs:label>hasHumanError</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#hasMachineStatusAtEvent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#hasMachineStatusAtEvent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#IncidentEvent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#MachineStatus"/>
+        <rdfs:comment>Specifies the operational status of the machine at the time of the incident event.</rdfs:comment>
+        <rdfs:label>hasMachineStatusAtEvent</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#hasOrganizationalIssue -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#hasOrganizationalIssue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#IncidentEvent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#OrganizationalIssue"/>
+        <rdfs:comment>Specifies the organizational issue(s) identified in an incident event.</rdfs:comment>
+        <rdfs:label>hasOrganizationalIssue</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#hasParticipant -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#hasParticipant">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#WorkActivity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonParticipant"/>
+        <rdfs:comment>Specifies the PersonParticipant(s) present during the work activity.</rdfs:comment>
+        <rdfs:label>hasParticipant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#hasRequirement -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#hasRequirement">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonPerformer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#ActivityRequirement"/>
+        <rdfs:comment>Specifies the activity requirement that a PersonPerformer must satisfy.</rdfs:comment>
+        <rdfs:label>hasRequirement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#hasStatus -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#hasStatus">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Machine"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#MachineStatus"/>
+        <rdfs:comment>Specifies the operational status of a machine.</rdfs:comment>
+        <rdfs:label>hasStatus</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#hasStep -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#hasStep">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTOProcedure"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTOProcedureStep"/>
+        <rdfs:comment>Specifies the step composition of a LOTO procedure.</rdfs:comment>
+        <rdfs:label>hasStep</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#hasTechnologicalFault -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#hasTechnologicalFault">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#IncidentEvent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#TechnologicalFault"/>
+        <rdfs:comment>Specifies the technological fault identified in an incident event.</rdfs:comment>
+        <rdfs:label>hasTechnologicalFault</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#hasWorkArea -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#hasWorkArea">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Machine"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#WorkAreaLocation"/>
+        <rdfs:comment>Specifies the work area location where a machine is installed or operated.</rdfs:comment>
+        <rdfs:label>hasWorkArea</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#intendedToPreventConsequence -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#intendedToPreventConsequence">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTOProcedureStep"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Consequence"/>
+        <rdfs:comment>Specifies the consequence that a LOTO procedure step is designed to prevent.</rdfs:comment>
+        <rdfs:label>intendedToPreventConsequence</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#involvesMachine -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#involvesMachine">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#WorkActivity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Machine"/>
+        <rdfs:comment>Specifies the machine involved in a work activity.</rdfs:comment>
+        <rdfs:label>involvesMachine</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#involvesPerson -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#involvesPerson">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#IncidentEvent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonPerformer"/>
+        <rdfs:comment>Specifies the PersonPerformer who was directly involved in the work activity at the time of the incident.</rdfs:comment>
+        <rdfs:label>involvesPerson</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#isAddressedByStep -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#isAddressedByStep">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTOProcedureStep"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Cause"/>
+        <rdfs:comment>Specifies the LOTO procedure step that addresses a particular cause of an incident.</rdfs:comment>
+        <rdfs:label>isAddressedByStep</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#isRequiredByActivity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#isRequiredByActivity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#ActivityRequirement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#WorkActivity"/>
+        <rdfs:comment>Specifies the work activity for which an activity requirement applies.</rdfs:comment>
+        <rdfs:label>isRequiredByActivity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#leadsToViolation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#leadsToViolation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#OrganizationalIssue"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Violation"/>
+        <rdfs:comment>Specifies the violation that an organizational issue contributed to producing.</rdfs:comment>
+        <rdfs:label>leadsToViolation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#locationexposesToHazard -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#locationexposesToHazard">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#WorkAreaLocation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Hazard"/>
+        <rdfs:comment>Specifies the hazard present at a work area location.</rdfs:comment>
+        <rdfs:label>locationexposesToHazard</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#managedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#managedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#WorkAreaLocation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#OrganizationalUnit"/>
+        <rdfs:comment>Specifies the organizational unit responsible for managing a work area location.</rdfs:comment>
+        <rdfs:label>managedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#mitigatesRisk -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#mitigatesRisk">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#ControlMeasure"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Risk"/>
+        <rdfs:comment>Specifies the risk mitigated by a control measure.</rdfs:comment>
+        <rdfs:label>mitigatesRisk</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#notFollowedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#notFollowedIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTOProcedureStep"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#WorkActivity"/>
+        <rdfs:comment>Specifies the work activity in which a LOTO procedure step was not followed.</rdfs:comment>
+        <rdfs:label>notFollowedIn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#occursAtWorkArea -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#occursAtWorkArea">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#IncidentEvent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#WorkAreaLocation"/>
+        <rdfs:comment>Specifies the work area location where the incident occurred.</rdfs:comment>
+        <rdfs:label>occursAtWorkArea</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#partOfPlant -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#partOfPlant">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Machine"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Plant"/>
+        <rdfs:comment>Specifies that a machine is part of a plant</rdfs:comment>
+        <rdfs:label>partOfPlant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#performedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#performedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#WorkActivity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonPerformer"/>
+        <rdfs:comment>Specifies the PersonPerformer who executed the work activity.</rdfs:comment>
+        <rdfs:label>performedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#protectsFromHazard -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#protectsFromHazard">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#ControlMeasure"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Hazard"/>
+        <rdfs:comment>Specifies the hazard against which a control measure provides protection.</rdfs:comment>
+        <rdfs:label>protectsFromHazard</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#releasesEnergyIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#releasesEnergyIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Machine"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#EnergyReleaseEvent"/>
+        <rdfs:comment>Specifies the energy release event triggered by a machine.</rdfs:comment>
+        <rdfs:label>releasesEnergyIn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#requires -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#requires">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTOProcedure"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTORequirement"/>
+        <rdfs:comment>Specifies the regulatory requirements of a LOTO procedure.</rdfs:comment>
+        <rdfs:label>requires</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#requiresAuthorization -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#requiresAuthorization">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTOProcedureStep"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Authorization"/>
+        <rdfs:comment>Specifies the authorizations required to perform a LOTOProcedureStep.</rdfs:comment>
+        <rdfs:label>requiresAuthorization</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#requiresControlMeasure -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#requiresControlMeasure">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTOProcedureStep"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#ControlMeasure"/>
+        <rdfs:comment>Specifies the control measure required by a LOTO procedure step.</rdfs:comment>
+        <rdfs:label>requiresControlMeasure</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#resultsInConsequence -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#resultsInConsequence">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#IncidentEvent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Consequence"/>
+        <rdfs:comment>Specifies the consequence resulting from an incident event.</rdfs:comment>
+        <rdfs:label>resultsInConsequence</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#riskFromHazard -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#riskFromHazard">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Risk"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Hazard"/>
+        <rdfs:comment>Specifies the hazard from which a risk is derived.</rdfs:comment>
+        <rdfs:label>riskFromHazard</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#subjectToPenalty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#subjectToPenalty">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Violation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Penalty"/>
+        <rdfs:comment>Assigns a formal penalty to a Violation.</rdfs:comment>
+        <rdfs:label>subjectToPenalty</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#sufferedByParticipant -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#sufferedByParticipant">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Consequence"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonParticipant"/>
+        <rdfs:comment>Specifies whether the consequence was suffered by a PersonParticipant. To exist, PersonPartcipant must be the victim.</rdfs:comment>
+        <rdfs:label>sufferedByParticipant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#sufferedByPerformer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#sufferedByPerformer">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Consequence"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonPerformer"/>
+        <rdfs:comment>Specifies whether the consequence was suffered by the PersonPerformer.</rdfs:comment>
+        <rdfs:label>sufferedByPerformer</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#sufferedBySupervisor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#sufferedBySupervisor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Consequence"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonSupervisor"/>
+        <rdfs:comment>Specifies whether the consequence was suffered by a PersonSupervisor.</rdfs:comment>
+        <rdfs:label>sufferedBySupervisor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#supervisedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#supervisedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#WorkActivity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonSupervisor"/>
+        <rdfs:comment>Specifies the PersonSupervisor responsible for overseeing a work activity.</rdfs:comment>
+        <rdfs:label>supervisedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#supervises -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#supervises">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonSupervisor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonPerformer"/>
+        <rdfs:comment>Specifies the PersonPerformer supervised by a PersonSupervisor.</rdfs:comment>
+        <rdfs:label>supervises</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#takesPlaceIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#takesPlaceIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#WorkActivity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#WorkAreaLocation"/>
+        <rdfs:comment>Specifies the work area location where the work activity took place.</rdfs:comment>
+        <rdfs:label>takesPlaceIn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#treatedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#treatedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Consequence"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#AidOrTreatment"/>
+        <rdfs:comment>Specifies the aid or treatment provided in response to a consequence.</rdfs:comment>
+        <rdfs:label>treatedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#triggers -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#triggers">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#EnergyReleaseEvent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#IncidentEvent"/>
+        <rdfs:comment>Specifies the incident event triggered by an energy release event.</rdfs:comment>
+        <rdfs:label>triggers</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#usesControlMeasure -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#usesControlMeasure">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonPerformer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#ControlMeasure"/>
+        <rdfs:comment>Specifies the control measure used by a PersonPerformer during a work activity.</rdfs:comment>
+        <rdfs:label>usesControlMeasure</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#violates -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#violates">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Violation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTORequirement"/>
+        <rdfs:comment>Specifies the LOTORequirement that a Violation has breached.</rdfs:comment>
+        <rdfs:label>violates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#workAreaWithinPlant -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#workAreaWithinPlant">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#WorkAreaLocation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Plant"/>
+        <rdfs:comment>Specifies the plant in which a work area location is situated.</rdfs:comment>
+        <rdfs:label>workAreaWithinPlant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#AidPlace -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#AidPlace">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#AidOrTreatment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The physical location where aid or medical treatment was provided following the incident, as explicitly stated or clearly implied in the incident narrative.</rdfs:comment>
+        <rdfs:label>AidPlace</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#AidPromptness -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#AidPromptness">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#AidOrTreatment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The timing of the aid or medical response relative to the incident, as described in the incident narrative.</rdfs:comment>
+        <rdfs:label>AidPromptness</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#AidResponderRole -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#AidResponderRole">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#AidOrTreatment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The role of the person(s) who provided aid or treatment during the incident (e.g., coworker, supervisor, medical staff), if mentioned in the narrative.</rdfs:comment>
+        <rdfs:label>AidResponderRole</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#AutomationLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#AutomationLevel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Machine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The level of automation of the plant or system involved in the incident, if mentioned in the narrative (e.g., manual, semi-automated, automated).</rdfs:comment>
+        <rdfs:label>AutomationLevel</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Certified -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Certified">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LevelOfTraining"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#ConfinedSpace -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#ConfinedSpace">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#WorkAreaLocation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Indicates whether the incident occurred in a confined space, as explicitly stated or clearly implied by the narrative.</rdfs:comment>
+        <rdfs:label>ConfinedSpace</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#ConsequenceOutcome -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#ConsequenceOutcome">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Consequence"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The medical outcome of the incident for the affected person(s), based on injuries or damage explicitly described in the narrative.</rdfs:comment>
+        <rdfs:label>ConsequenceOutcome</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#ControlMeasureAccessibility -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#ControlMeasureAccessibility">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#ControlMeasure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Describes whether the relevant control measure was accessible and usable at the time of the incident, according to the narrative.</rdfs:comment>
+        <rdfs:label>ControlMeasureAccessibility</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Critical_risk -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Critical_risk">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#RiskSeverity"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Distracted -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Distracted">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PsycologicalStatus"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#ErrorIntentionality -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#ErrorIntentionality">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#HumanError"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Indicates whether the unsafe action or omission described in the incident was intentional (true) or unintentional (false), based on narrative cues.</rdfs:comment>
+        <rdfs:label>ErrorIntentionality</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#ErrorMotivation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#ErrorMotivation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#HumanError"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The stated or implied reason behind the human error described in the incident (e.g., time pressure, lack of attention), if mentioned in the narrative.</rdfs:comment>
+        <rdfs:label>ErrorMotivation</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Fatal -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Fatal">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#ConsequenceOutcome"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Fatal_risk -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Fatal_risk">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#RiskSeverity"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Fatigued -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Fatigued">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PsycologicalStatus"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#HeatCold -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#HeatCold">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#WorkAreaLocation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The thermal condition of the work area at the time of the incident, if mentioned or implied in the narrative.</rdfs:comment>
+        <rdfs:label>HeatCold</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Hospital -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Hospital">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#AidPlace"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Hospitalized -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Hospitalized">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#ConsequenceOutcome"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Immediate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Immediate">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#AidPromptness"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Impaired -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Impaired">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PsycologicalStatus"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#IncidentDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#IncidentDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#IncidentEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment>The calendar date on which the described incident occurred, as explicitly stated in the narrative.</rdfs:comment>
+        <rdfs:label>IncidentDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#IncidentDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#IncidentDescription">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#IncidentEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>A textual description of the incident as reported in the source narrative, summarizing the sequence of events leading to the injury or damage.</rdfs:comment>
+        <rdfs:label>IncidentDescription</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#IncidentTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#IncidentTime">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#IncidentEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#time"/>
+        <rdfs:comment>The time of day at which the incident occurred, as explicitly stated in the narrative.</rdfs:comment>
+        <rdfs:label>IncidentTime</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#IsRoutine -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#IsRoutine">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Cause"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Indicates whether the cause factor described in the incident narrative is portrayed as routine or habitual (true) versus unusual or exceptional (false).</rdfs:comment>
+        <rdfs:label>IsRoutine</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#IsVictim -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#IsVictim">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonParticipant"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonPerformer"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonSupervisor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Indicates whether the Person directly suffered the physical consequences of the incident (true) or not (false).</rdfs:comment>
+        <rdfs:label>IsVictim</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Layout -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Layout">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#WorkAreaLocation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>A description of the physical layout or configuration of the work area relevant to the incident, if provided in the narrative.</rdfs:comment>
+        <rdfs:label>Layout</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LevelOfTraining -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LevelOfTraining">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonParticipant"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonPerformer"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonSupervisor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The level of formal training of the Person in relation to the task or LOTO procedure, as explicitly stated or clearly implied in the narrative.</rdfs:comment>
+        <rdfs:label>LevelOfTraining</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Lighting -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Lighting">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#WorkAreaLocation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The lighting conditions in the work area during the incident, as described or implied in the narrative.</rdfs:comment>
+        <rdfs:label>Lighting</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Minor_risk -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Minor_risk">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#RiskSeverity"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Noise -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Noise">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#WorkAreaLocation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The noise level in the work area at the time of the incident, if mentioned or implied in the narrative.</rdfs:comment>
+        <rdfs:label>Noise</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Non-hospitalized -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Non-hospitalized">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#ConsequenceOutcome"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Non-immediate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Non-immediate">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#AidPromptness"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#None_experience -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#None_experience">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonExperience"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#None_leveloftraining -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#None_leveloftraining">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LevelOfTraining"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Off-site -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Off-site">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#AidPlace"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PenaltyAmount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PenaltyAmount">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Penalty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>The numerical monetary amount of any penalty imposed as a result of the incident or related violation, if specified in the narrative.</rdfs:comment>
+        <rdfs:label>PenaltyAmount</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PenaltyType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PenaltyType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Penalty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The type of penalty resulting from the incident or violation (e.g., administrative, disciplinary, legal), as described in the narrative.</rdfs:comment>
+        <rdfs:label>PenaltyType</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonExperience -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonExperience">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonParticipant"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonPerformer"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonSupervisor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The level of job or task experience of the Person, as described or implied in the incident narrative.</rdfs:comment>
+        <rdfs:label>PersonExperience</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PsycologicalStatus -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PsycologicalStatus">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonParticipant"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonPerformer"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonSupervisor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The psychological or cognitive state of the Person at the time of the incident (e.g., fatigued, stressed), if mentioned or clearly implied in the narrative.</rdfs:comment>
+        <rdfs:label>PsycologicalStatus</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Regulation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Regulation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#WorkAreaLocation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The degree of regulatory enforcement or safety rule compliance observed in the work area, as described or implied in the incident narrative.</rdfs:comment>
+        <rdfs:label>Regulation</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#RiskProbability -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#RiskProbability">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Risk"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The likelihood of the hazardous event occurring, as implied or described in the incident context.</rdfs:comment>
+        <rdfs:label>RiskProbability</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#RiskSeverity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#RiskSeverity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Risk"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The potential severity of harm associated with the identified risk, as described or implied in the incident narrative.</rdfs:comment>
+        <rdfs:label>RiskSeverity</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Role -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Role">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonParticipant"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonPerformer"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonSupervisor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The formal job role or occupational function of the Person at the time of the incident.</rdfs:comment>
+        <rdfs:label>Role</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Rushed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Rushed">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PsycologicalStatus"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Severe_risk -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Severe_risk">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#RiskSeverity"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Status -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Status">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTODevice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The operational state of a LOTO device at the time of the incident, indicating whether it was correctly applied, absent, or improperly removed.</rdfs:comment>
+        <rdfs:label>Status</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Stressed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Stressed">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PsycologicalStatus"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#SupervisionLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#SupervisionLevel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonPerformer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The degree of supervision present over the PersonPerformer during the activity leading to the incident, as described in the narrative.</rdfs:comment>
+        <rdfs:label>SupervisionLevel</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#TechnologicalFaultAwareness -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#TechnologicalFaultAwareness">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#TechnologicalFault"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Indicates whether the technological fault involved in the incident was known, partially known, or unknown to the organization before the incident occurred, according to the narrative.</rdfs:comment>
+        <rdfs:label>TechnologicalFaultAwareness</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Visibility -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Visibility">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#WorkAreaLocation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The visibility conditions in the work area during the incident (e.g., obstructed, clear), as described or implied in the narrative.</rdfs:comment>
+        <rdfs:label>Visibility</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#adequate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#adequate">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Lighting"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#applied -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#applied">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Status"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#clear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#clear">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Visibility"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#cold -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#cold">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#HeatCold"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#dark -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#dark">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Lighting"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#high_experience -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#high_experience">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonExperience"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#high_noise -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#high_noise">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Noise"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#high_regulation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#high_regulation">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Regulation"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#high_supervisionlevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#high_supervisionlevel">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#SupervisionLevel"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#hot -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#hot">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#HeatCold"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#inadequate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#inadequate">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Lighting"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#limited -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#limited">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Visibility"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#low_experience -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#low_experience">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonExperience"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#low_noise -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#low_noise">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Noise"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#low_regulation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#low_regulation">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Regulation"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#low_supervisionlevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#low_supervisionlevel">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#SupervisionLevel"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#medium_experience -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#medium_experience">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonExperience"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#medium_regulation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#medium_regulation">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Regulation"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#medium_supervisionlevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#medium_supervisionlevel">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#SupervisionLevel"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#moderate_noise -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#moderate_noise">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Noise"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#none_supervisionlevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#none_supervisionlevel">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#SupervisionLevel"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#not_applied -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#not_applied">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Status"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#obstructed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#obstructed">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Visibility"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#removed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#removed">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Status"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#temperate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#temperate">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#HeatCold"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#unknow_aidplace -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#unknow_aidplace">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#AidPlace"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#unknown -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#unknown">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Visibility"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#unknown_aidpromptness -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#unknown_aidpromptness">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#AidPromptness"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#unknown_experience -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#unknown_experience">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonExperience"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#unknown_heatcold -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#unknown_heatcold">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#HeatCold"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#unknown_leveloftraining -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#unknown_leveloftraining">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LevelOfTraining"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#unknown_lighting -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#unknown_lighting">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Lighting"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#unknown_noise -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#unknown_noise">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Noise"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#unknown_psycologicalstatus -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#unknown_psycologicalstatus">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PsycologicalStatus"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#unknown_regulation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#unknown_regulation">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Regulation"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#unknown_supervisionlevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#unknown_supervisionlevel">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#SupervisionLevel"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#ActivityRequirement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#ActivityRequirement">
+        <Mid-:Upper-OntologyAlignment>IOF-Signature</Mid-:Upper-OntologyAlignment>
+        <rdfs:ValuesPossible>The knowledge, skills, or qualifications that a person must possess to perform a work activity safely.</rdfs:ValuesPossible>
+        <rdfs:label>ActivityRequirements</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#AidOrTreatment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#AidOrTreatment">
+        <Mid-:Upper-OntologyAlignment>IOF-Core</Mid-:Upper-OntologyAlignment>
+        <rdfs:comment>A medical or first-aid intervention provided in response to injuries sustained during an incident.</rdfs:comment>
+        <rdfs:label>AidOrTreatment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Authorization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Authorization">
+        <Mid-:Upper-OntologyAlignment>IOF-Signature</Mid-:Upper-OntologyAlignment>
+        <rdfs:ValuesPossible>Have, Have Not, Not Specified</rdfs:ValuesPossible>
+        <rdfs:comment>Formal approval, permit, or permission granted to a person to perform tasks subject to LOTO or hazardous energy control procedures during an incident.</rdfs:comment>
+        <rdfs:label>Authorization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Cause -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Cause">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#generatesConsequence"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Consequence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <Mid-:Upper-OntologyAlignment>IOF-Signature</Mid-:Upper-OntologyAlignment>
+        <rdfs:comment>Any condition, action, or circumstance that contributes to the occurrence or severity of a LOTO incident. Includes human, technological, and organizational factors.</rdfs:comment>
+        <rdfs:label>Cause</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Consequence -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Consequence">
+        <Mid-:Upper-OntologyAlignment>iof-maint</Mid-:Upper-OntologyAlignment>
+        <rdfs:comment>The actual injury, fatality, or material damage resulting from the occurrence of an incident.</rdfs:comment>
+        <rdfs:label>Consequence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#ControlMeasure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#ControlMeasure">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#mitigatesRisk"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Risk"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#protectsFromHazard"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Hazard"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <Mid-:Upper-OntologyAlignment>iof-maint</Mid-:Upper-OntologyAlignment>
+        <rdfs:comment>A technical, procedural, or organizational measure implemented to reduce exposure to hazards or mitigate risks during work activities.</rdfs:comment>
+        <rdfs:label>ControlMeasure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#EnergyReleaseEvent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#EnergyReleaseEvent">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#triggers"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#IncidentEvent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <Mid-:Upper-OntologyAlignment>iof-maint</Mid-:Upper-OntologyAlignment>
+        <rdfs:comment>An unintended activation, movement, or discharge of hazardous energy resulting from loss of control of an energy source.</rdfs:comment>
+        <rdfs:label>EnergyReleaseEvent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#EnergySource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#EnergySource">
+        <Mid-:Upper-OntologyAlignment>IOF-Core</Mid-:Upper-OntologyAlignment>
+        <rdfs:comment>A form or origin of energy associated with a machine or system that can cause harm if unexpectedly released during a work activity.</rdfs:comment>
+        <rdfs:label>EnergySource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Hazard -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Hazard">
+        <Mid-:Upper-OntologyAlignment>IOF-Core</Mid-:Upper-OntologyAlignment>
+        <rdfs:comment>A condition, source, or situation with the inherent potential to cause injury or damage during a work activity.</rdfs:comment>
+        <rdfs:label>Hazard</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#HumanError -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#HumanError">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Cause"/>
+        <Mid-:Upper-OntologyAlignment>iof-maint</Mid-:Upper-OntologyAlignment>
+        <rdfs:comment>A cause factor characterized by an unsafe action, omission, or decision made by a person during a work activity.</rdfs:comment>
+        <rdfs:label>HumanError</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#InadequateSupervision -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#InadequateSupervision">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#OrganizationalIssue"/>
+        <Mid-:Upper-OntologyAlignment>iof-maint</Mid-:Upper-OntologyAlignment>
+        <rdfs:comment>An organizational issue involving insufficient oversight, guidance, or enforcement of safety practices during work activities.</rdfs:comment>
+        <rdfs:label>InadequateSupervision</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#InadequateTraining -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#InadequateTraining">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#OrganizationalIssue"/>
+        <Mid-:Upper-OntologyAlignment>iof-maint</Mid-:Upper-OntologyAlignment>
+        <rdfs:comment>An organizational issue in which personnel lack the necessary knowledge or skills to perform activities safely.</rdfs:comment>
+        <rdfs:label>InadequateTraining</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#IncidentEvent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#IncidentEvent">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#carriedOutDuring"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#WorkActivity"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#hasCauseFactor"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Cause"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#resultsInConsequence"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Consequence"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <Mid-:Upper-OntologyAlignment>iof-maint</Mid-:Upper-OntologyAlignment>
+        <rdfs:comment>A specific, unplanned occurrence during a work activity that results in injury, fatality, or material damage. Each incident is uniquely identified by its ID.</rdfs:comment>
+        <rdfs:label>IncidentEvent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTODevice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTODevice">
+        <Mid-:Upper-OntologyAlignment>IOF-Core</Mid-:Upper-OntologyAlignment>
+        <rdfs:comment>A physical mechanism used to isolate or indicate the locked or tagged-out state of an energy source on a machine or equipment, preventing unauthorized or accidental re-energization during maintenance or servicing activities.</rdfs:comment>
+        <rdfs:label>LOTODevice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTOProcedure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTOProcedure">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#hasStep"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTOProcedureStep"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#requires"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTORequirement"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <Mid-:Upper-OntologyAlignment>IOF-Core</Mid-:Upper-OntologyAlignment>
+        <rdfs:comment>The safety procedure standard used to isolate hazardous energy sources and ensure personnel safety before conducting maintenance activities in a LOTO incident (e.g., OSHA 1910.147).</rdfs:comment>
+        <rdfs:label>LOTOProcedure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTOProcedureStep -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTOProcedureStep">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#requiresAuthorization"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Authorization"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#requiresControlMeasure"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#ControlMeasure"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <Mid-:Upper-OntologyAlignment>IOF-Core</Mid-:Upper-OntologyAlignment>
+        <rdfs:comment>A defined phase within a LOTO procedure, representing a discrete and mandatory step in the sequence of energy isolation and control activities.</rdfs:comment>
+        <rdfs:label>LOTOProcedureStep</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTORequirement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTORequirement">
+        <Mid-:Upper-OntologyAlignment>IOF-Signature</Mid-:Upper-OntologyAlignment>
+        <rdfs:comment>A mandatory rule or obligation defined by regulations that outlines how LOTO procedures must be applied or followed during incidents.</rdfs:comment>
+        <rdfs:label>LOTORequirement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Machine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Machine">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#hasEnergySource"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#EnergySource"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#hasStatus"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#MachineStatus"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#hasWorkArea"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#WorkAreaLocation"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#partOfPlant"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Plant"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <Mid-:Upper-OntologyAlignment>IOF-Core</Mid-:Upper-OntologyAlignment>
+        <rdfs:comment>A powered or mechanical system used to perform work functions and capable of generating hazardous conditions during operation.</rdfs:comment>
+        <rdfs:label>Machine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#MachineComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#MachineComponent">
+        <Mid-:Upper-OntologyAlignment>IOF-Core</Mid-:Upper-OntologyAlignment>
+        <rdfs:comment>A physical part or subsystem of a machine whose function contributes to the machine&apos;s overall operation.</rdfs:comment>
+        <rdfs:label>MachineComponent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#MachineStatus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#MachineStatus">
+        <Mid-:Upper-OntologyAlignment>iof-maint</Mid-:Upper-OntologyAlignment>
+        <rdfs:comment>The operational or physical condition of a machine at a given point in time, including states relevant to energy isolation and LOTO procedures.</rdfs:comment>
+        <rdfs:label>MachineStatus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#OrganizationalIssue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#OrganizationalIssue">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Cause"/>
+        <Mid-:Upper-OntologyAlignment>iof-maint</Mid-:Upper-OntologyAlignment>
+        <rdfs:comment>A cause factor related to organizational conditions that influence how work activities are planned, supervised, or executed.</rdfs:comment>
+        <rdfs:label>OrganizationalIssue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#OrganizationalUnit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#OrganizationalUnit">
+        <Mid-:Upper-OntologyAlignment>IOF-Core</Mid-:Upper-OntologyAlignment>
+        <rdfs:comment>A structured part of an organization responsible for managing personnel, equipment, or work areas involved in activities or incidents.</rdfs:comment>
+        <rdfs:label>OrganizationalUnit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Penalty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Penalty">
+        <Mid-:Upper-OntologyAlignment>IOF-Signature</Mid-:Upper-OntologyAlignment>
+        <rdfs:comment>A formal disciplinary or legal consequence applied when a violation of safety procedures or regulations is identified during a LOTO incident.</rdfs:comment>
+        <rdfs:label>Penalty</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonParticipant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonParticipant">
+        <Mid-:Upper-OntologyAlignment>BFO</Mid-:Upper-OntologyAlignment>
+        <rdfs:comment>The person(s) present at the scene of the incident who held neither a supervisory nor a performer role at the time the incident occurred.</rdfs:comment>
+        <rdfs:label>PersonParticipant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonPerformer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonPerformer">
+        <Mid-:Upper-OntologyAlignment>BFO</Mid-:Upper-OntologyAlignment>
+        <rdfs:comment>The person(s) who were directly performing the work activity at the time the incident occurred.</rdfs:comment>
+        <rdfs:label>PersonPerformer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonSupervisor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#PersonSupervisor">
+        <Mid-:Upper-OntologyAlignment>BFO</Mid-:Upper-OntologyAlignment>
+        <rdfs:comment>The person(s) who held a supervisory role over the work activity in which the incident occurred, regardless of whether they were physically present.</rdfs:comment>
+        <rdfs:label>PersonSupervisor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Plant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Plant">
+        <Mid-:Upper-OntologyAlignment>IOF-Core</Mid-:Upper-OntologyAlignment>
+        <rdfs:comment>A physical industrial facility that hosts machines, work areas, and activities where incidents may occur.</rdfs:comment>
+        <rdfs:label>Plant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#ProcedureDeficiency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#ProcedureDeficiency">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#OrganizationalIssue"/>
+        <Mid-:Upper-OntologyAlignment>IOF-Signature</Mid-:Upper-OntologyAlignment>
+        <rdfs:comment>An organizational issue arising from safety procedures that are incomplete, unclear, or insufficiently defined.</rdfs:comment>
+        <rdfs:label>ProcedureDeficiency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#ProtectiveDevice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#ProtectiveDevice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#ControlMeasure"/>
+        <rdfs:comment>A physical control measure designed to prevent or limit contact with hazardous parts or energy sources.</rdfs:comment>
+        <rdfs:label>IOF-Core</rdfs:label>
+        <rdfs:label>ProtectiveDevice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#ProtectiveProcedure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#ProtectiveProcedure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#ControlMeasure"/>
+        <Mid-:Upper-OntologyAlignment>IOF-Signature</Mid-:Upper-OntologyAlignment>
+        <rdfs:comment>An internal procedural control measure intended to ensure safe interaction with hazards, including rules governing proper behavior during work activities.</rdfs:comment>
+        <rdfs:label>ProtectiveProcedure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#ResourceOrTimePressure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#ResourceOrTimePressure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#OrganizationalIssue"/>
+        <rdfs:comment>An organizational issue in which limited time, staffing, or resources influence unsafe decision-making or actions.</rdfs:comment>
+        <rdfs:comment>iof-maint</rdfs:comment>
+        <rdfs:label>ResourceOrTimePressure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Risk -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Risk">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#riskFromHazard"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Hazard"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <Mid-:Upper-OntologyAlignment>IOF-Signature</Mid-:Upper-OntologyAlignment>
+        <rdfs:comment>The potential for harm arising from exposure to a hazard, considering both the likelihood of occurrence and the severity of consequences.</rdfs:comment>
+        <rdfs:label>Risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#RoutineBypass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#RoutineBypass">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#OrganizationalIssue"/>
+        <Mid-:Upper-OntologyAlignment>iof-maint</Mid-:Upper-OntologyAlignment>
+        <rdfs:comment>An organizational issue characterized by the habitual or normalized circumvention of established safety controls or procedures.</rdfs:comment>
+        <rdfs:label>RoutineBypass</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#SafetyCultureIssue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#SafetyCultureIssue">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#OrganizationalIssue"/>
+        <Mid-:Upper-OntologyAlignment>IOF-Signature</Mid-:Upper-OntologyAlignment>
+        <rdfs:comment>An organizational issue reflecting shared attitudes or practices within an organization that undervalue or deprioritize safety requirements.</rdfs:comment>
+        <rdfs:label>SafetyCultureIssue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#TechnologicalFault -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#TechnologicalFault">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Cause"/>
+        <Mid-:Upper-OntologyAlignment>iof-maint</Mid-:Upper-OntologyAlignment>
+        <rdfs:comment>A cause factor arising from a malfunction, defect, or failure of a machine or its components.</rdfs:comment>
+        <rdfs:label>TechnologicalFault</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Violation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Violation">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#subjectToPenalty"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Penalty"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#violates"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTORequirement"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <Mid-:Upper-OntologyAlignment>IOF-Signature</Mid-:Upper-OntologyAlignment>
+        <rdfs:comment>A condition or event in which a required rule, procedure, or safety control is omitted, not applied, or deliberately bypassed during a LOTO activity.</rdfs:comment>
+        <rdfs:label>Violation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#WorkActivity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#WorkActivity">
+        <Mid-:Upper-OntologyAlignment>iof-maint</Mid-:Upper-OntologyAlignment>
+        <rdfs:comment>A task or operation performed within an industrial context, involving interaction between persons, equipment, and potential hazards.</rdfs:comment>
+        <rdfs:label>WorkActivity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#WorkAreaLocation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#WorkAreaLocation">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#workAreaWithinPlant"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Plant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <Mid-:Upper-OntologyAlignment>IOF-Core</Mid-:Upper-OntologyAlignment>
+        <rdfs:comment>A defined physical location within a plant where work activities are performed and where incidents may occur.</rdfs:comment>
+        <rdfs:label>WorkAreaLocation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Adapter_pin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Adapter_pin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTODevice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Blank_flange -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Blank_flange">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTODevice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Bolted_slip_blind -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Bolted_slip_blind">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTODevice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Bypass -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Bypass">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#OrganizationalIssue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Chain -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Chain">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTODevice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Chemical_energy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Chemical_energy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#EnergySource"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#DeEnergized -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#DeEnergized">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#MachineStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Electrical_energy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Electrical_energy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#EnergySource"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Energized -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Energized">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#MachineStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Energy_source_isolation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Energy_source_isolation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTOProcedureStep"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Equipment_shutdown -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Equipment_shutdown">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTOProcedureStep"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Equipment_shutdown_preparation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Equipment_shutdown_preparation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTOProcedureStep"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Gravity_energy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Gravity_energy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#EnergySource"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Have -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Have">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Authorization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Have_not -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Have_not">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Authorization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Hydraulic_energy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Hydraulic_energy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#EnergySource"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Inadequate_supervision -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Inadequate_supervision">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#OrganizationalIssue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Inadequate_training -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Inadequate_training">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#OrganizationalIssue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Isolation_verification -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Isolation_verification">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTOProcedureStep"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Jammed -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Jammed">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#MachineStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Key_block -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Key_block">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTODevice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Lack_of_engineering_controls -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Lack_of_engineering_controls">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#OrganizationalIssue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Maintanence_or_servicing_activities -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Maintanence_or_servicing_activities">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTOProcedureStep"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Maintenance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Maintenance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#MachineStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Mechanical_energy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Mechanical_energy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#EnergySource"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Not_specified -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Not_specified">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Authorization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Notification_of_affected_employees -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Notification_of_affected_employees">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTOProcedureStep"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Operating -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Operating">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#MachineStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Other_energy_source -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Other_energy_source">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#EnergySource"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Other_lotodevice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Other_lotodevice">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTODevice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Other_organizationalissues -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Other_organizationalissues">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#OrganizationalIssue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Padlock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Padlock">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTODevice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Pneumatic_energy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Pneumatic_energy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#EnergySource"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Procedure_deficiency -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Procedure_deficiency">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#OrganizationalIssue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Residual_energy_dissipation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Residual_energy_dissipation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTOProcedureStep"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Restoration_of_energy_and_restart -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Restoration_of_energy_and_restart">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTOProcedureStep"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Restored -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Restored">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#MachineStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Safety_culture_issue -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Safety_culture_issue">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#OrganizationalIssue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Self_locking_fastener -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Self_locking_fastener">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTODevice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Stopped -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Stopped">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#MachineStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Stored_energy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Stored_energy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#EnergySource"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Tag -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Tag">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTODevice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Thermal_energy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Thermal_energy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#EnergySource"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Wedge -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Wedge">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTODevice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#faulty_equipment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#faulty_equipment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Cause"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#unauthorized_re-energization -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#unauthorized_re-energization">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Cause"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Lockout/Tagout_device_application -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Lockout/Tagout_device_application">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#LOTOProcedureStep"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Startup/Shutdown -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Startup/Shutdown">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#MachineStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#engineering/guarding_deficiency -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#engineering/guarding_deficiency">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Cause"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#failure_to_perform_lockout/tagout_procedures -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#failure_to_perform_lockout/tagout_procedures">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Cause"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#human_error_during_lockout/tagout_procedures -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#human_error_during_lockout/tagout_procedures">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Cause"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#removal_of_lockout/tagout_devices -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#removal_of_lockout/tagout_devices">
+        <rdf:type rdf:resource="http://www.semanticweb.org/saras/ontologies/2026/0/LOTO-RO#Cause"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,29 @@
+### Python ###
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+
+### Virtual environments ###
+graphragLOTO/
+venv/
+.venv/
+env/
+ENV/
+
+### Jupyter ###
+.ipynb_checkpoints/
+
+### Auto-generated data (recreated on pipeline run) ###
+**/data/input/lancedb/
+
+### Office / OS temp files ###
+~$*
+*.tmp
+.DS_Store
+Thumbs.db
+
+### Duplicate / scratch files ###
+*- Copia.*
+* - Copia.*
