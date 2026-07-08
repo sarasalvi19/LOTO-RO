@@ -8,17 +8,16 @@ results produced against a benchmark of test queries.
 
 ## Repository contents
 
-- `LOTO-RO_ontology.xlsx` — the LOTO-RO application ontology (classes, relations,
-  attributes).
+- `LOTO-RO_ontology.xlsx` — the LOTO-RO application ontology (classes, relations,  attributes).
+- `LOTO-RO_schema.pdf` — the LOTO-RO application ontology (classes, relations,  attributes) illustred as a graph.
 - `LOTO-RO_ Protege.rdf` — the ontology exported from Protégé (OWL/RDF).
 - `LOTO-RO_grounded_KG + GT.xlsx` — the knowledge graph grounded on the ontology,
   with gold-standard ("ground truth") annotations used for evaluation.
 - `Benchmark.xlsx` — the benchmark query set used to test retrieval and
   question-answering quality.
-- `Appendix_LOTORO.docx` — supplementary material: ontology entity clusters and
+- `Appendix_LOTORO.pdf` — supplementary material: ontology entity clusters and
   sample competency-question validation.
-- `graphrag_LOTORO/` — the GraphRAG pipeline, evaluation notebooks and results
-  used with the LOTO-RO knowledge graph. See
+- `graphrag_LOTORO/` — the GraphRAG pipeline, evaluation notebooks and results used with the LOTO-RO knowledge graph. See
   [`graphrag_LOTORO/graphrag/readme.txt`](graphrag_LOTORO/graphrag/readme.txt)
   for full documentation of the pipeline (architecture, configuration, input/output
   formats, cost estimation).
