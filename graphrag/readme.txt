@@ -380,19 +380,3 @@ DEPENDENCIES
 Install all dependencies:
 
     pip install -r requirements.txt
-
-
-================================================================================
-CITATION
-================================================================================
-
-If you use this pipeline in your research, please cite:
-
-    @article{your-paper-2025,
-      title   = {Your Paper Title},
-      author  = {Your Name et al.},
-      journal = {Safety Science},
-      year    = {2025},
-    }
-
-================================================================================
